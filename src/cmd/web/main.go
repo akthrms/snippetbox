@@ -19,7 +19,7 @@ type application struct {
 
 func main() {
 	addr := flag.String("addr", ":4000", "HTTP network address")
-	dns := flag.String("dns", "root:snippetbox@tcp(db:3306)/snippetbox?charset=utf8mb4&parseTime=True&loc=Local", "MySQL data source name")
+	dns := flag.String("dns", "root:snippetbox@tcp(snippetbox-db:3306)/snippetbox?charset=utf8mb4&parseTime=True&loc=Local", "MySQL data source name")
 	flag.Parse()
 
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
