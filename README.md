@@ -5,18 +5,17 @@ https://lets-go.alexedwards.net/
 ## Docker起動
 
 ```sh
-$ docker-compose build
-$ docker-compose up -d
+$ make start
 ```
 
 ## Webサーバー起動
 
 ```sh
-$ docker exec -it snippetbox-app go run ./cmd/web
+$ make gorun
 ```
 
 ## Docker停止
 
 ```sh
-$ docker-compose down
+$ make stop
 ```
