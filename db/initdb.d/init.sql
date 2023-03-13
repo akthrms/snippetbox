@@ -42,3 +42,13 @@ insert into snippets (title, content, created, expires) values (
     date_add(utc_timestamp(), interval 7 day)
 )
 ;
+
+create table sessions (
+    token char(43) primary key,
+    data blob not null,
+    expiry timestamp(6) not null
+)
+;
+
+create index sessions_expiry_idx on sessions(expiry)
+;
